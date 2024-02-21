@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KOUIZE</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+    <!-- Start Header Section -->
+<nav class="p-5 md:flex md:items-center md:justify-between">
+    <div class="flex justify-between items-center">
+        <span class="cursor-pointer">
+            <img src="img/logo.png" alt="logo" class="w-32">
+        </span>
+        <span class="text-2x1 md:hidden">
+            <ion-icon name="menu-outline" onclick="sidebar(this)"></ion-icon>
+        </span>
+    </div>
+        <ul class="md:flex md:items-center z-[-1] md:z-auto md:static absolute w-full left-0 md:w-auto md:py-0 py-4 mdpl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-out duration-700">
+            <li class="mx-4 my-5 md:my-0"><a href="" class="text-x1 hover:text-orange-500 duration-100">Home</a></li>
+            <li class="mx-4 my-5 md:my-0"><a href="" class="text-x1 hover:text-orange-500 duration-100">Service</a></li>
+            <li class="mx-4 my-5 md:my-0"><a href="" class="text-x1 hover:text-orange-500 duration-100">Blog</a></li>
+            <li class="mx-4 my-5 md:my-0"><a href="" class="text-x1 hover:text-orange-500 duration-100">Gallery</a></li>
+            <li class="mx-4 my-5 md:my-0"><a href="" class="text-x1 hover:text-orange-500 duration-100">About</a></li>
+            <li class="mx-4 my-5 md:my-0"><a href="" class="text-x1 hover:text-orange-500 duration-100">Login</a></li>
+        </ul>
+    
+</nav>
+
+    <!-- End Header Section -->
+
+
+
+    <!-- Start Banner Section -->
+<section style="background-image:url(img/banner.jpg)">
+    <ul class="container flex p-5 text-white font-bold">
+        <li>Home</li>
+        <li class="pl-5">Quizz</li>
+    </ul>
+    <h1 class="text-6xl p-4 text-white text-center">Let's try my awesome Quizz !</h1>
+    <ul class="lg:flex flex-wrap justify-center">
+        <li class="text-lg font-bold text-white p-10"><ion-icon name="star-outline"></ion-icon> So Awesome !</li>
+        <li class="text-lg font-bold text-white p-10"><ion-icon name="star-outline"></ion-icon> So Beautiful !</li>
+        <li class="text-lg font-bold text-white p-10"><ion-icon name="star-outline"></ion-icon> So Funny !</li>
+        <li class="text-lg font-bold text-white p-10"><ion-icon name="star-outline"></ion-icon> So Wooow !</li>
+    </ul>
+    <h1 class="text-6xl p-4 text-white text-center">What are you waiting for !?</h1>
+    <div class="text-center pb-20 my-10">
+        <button class="bg-red-200  text-white font-bold duration-500 px-6 py-3 hover:bg-orange-500 rounded-full">Let's start now !</button>
+    </div>
+    
+</section>
+    <!-- End Banner Section -->
+
+    <!-- Start Content Section -->
+<section>
+<h1 class="text-center mt-32 text-4xl font-bold">What is the exact answer to the question about the life ?</h1>
+
+
+</section>
+    <!-- End Content Section -->
+
+
+
+<script>
+    function sidebar(e){
+        let list = document.querySelector("ul");
+        e.name === "menu"
+        ? ((e.name ="close"),
+        list.classList.add("top-[80px]"),
+        list.classList.add("opacity-100"))
+        : ((e.name = "menu"),
+        list.classList.remove("top-[80px]"),
+        list.classList.remove("opacity-100"));
+    }
+</script>
+</body>
+</html>
